@@ -1,5 +1,5 @@
 {
-  "name": "Advisors",
+  "name": "advisors",
   "version": "1.0.0",
   "description": "Advisors - HCI Project",
   "main": "server.js",
