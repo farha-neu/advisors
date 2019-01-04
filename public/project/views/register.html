@@ -1,0 +1,95 @@
+
+
+<div class="bg-dark">
+    <div class="container">
+        <div class="card card-register mx-auto mt-5">
+            <p class="text-center login-header">CCIS GRADUATE ACADEMIC ADVISOR</p>
+            <div class="card-header"><h4>Register an Account</h4></div>
+            <div ng-if="model.error" class="alert alert-danger">
+                {{model.error}}
+            </div>
+            <div class="card-body">
+                <form name="registerForm" novalidate>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="exampleInputName">First name <span class="red">*</span></label>
+                                <input ng-model= "firstName" name="firstName" required class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+                            <span ng-show="registerForm.$submitted && registerForm.firstName.$invalid">
+                                First Name is required
+                            </span>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="exampleInputLastName">Last name <span class="red">*</span></label>
+                                <input ng-model= "lastName" class="form-control" name="lastName" required id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
+                           <span ng-show="registerForm.$submitted && registerForm.lastName.$invalid">
+                                Last Name is required
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address <span class="red">*</span></label>
+                        <input ng-model= "username" class="form-control" name="username" required id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <span ng-show="registerForm.$submitted && registerForm.username.$invalid">
+                                Email is required
+                            </span>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-xs-5 selectContainer">
+                            <label class="col-xs-3 control-label">Semester <span class="red">*</span></label>
+                            <select ng-model= "semester" class="form-control" id = "semester" name="semester" required ng-options="x for x in semesters" placeholder="Select Semester">
+                            </select>
+                  <span ng-show="registerForm.$submitted && registerForm.semester.$invalid">
+                    Semester is required
+                    </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Upload Profile Photo</label>
+                        <div class="col-xs-5 selectContainer">
+                            <input  id="fileUpload" name="FileUpload" type="file" />
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="exampleInputPassword1">Password <span class="red">*</span></label>
+                                <input ng-model= "password" class="form-control" name="password" required id="exampleInputPassword1" type="password" placeholder="Password">
+                            <span ng-show="registerForm.$submitted && registerForm.password.$invalid">
+                                Password is required
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label for="exampleConfirmPassword">Confirm password <span class="red">*</span></label>
+                                <input ng-model= "passwordVerify" name="passwordVerify" required class="form-control" id="exampleConfirmPassword" type="password" placeholder="Confirm password">
+                            <span ng-show="registerForm.$submitted && registerForm.passwordVerify.$invalid">
+                                Password is required
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="required-field"><span class="red">*</span> indicates required field</p>
+
+                    <button class="btn btn-primary btn-block"
+                            ng-click="model.register(username,password,passwordVerify,firstName,lastName,semester)">
+                        Register
+                    </button>
+                </form>
+                <div class="text-center">
+                    <a class="d-block small mt-3" href="#/login">Login Page</a>
+                    <a class="d-block small" href="#/forgotPassword">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

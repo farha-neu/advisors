@@ -1,0 +1,158 @@
+
+
+<div class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="#/user/{{model.userId}}">CCIS Graduate Academic Advisor</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Home">
+                    <a class="nav-link" href="#/user/{{model.userId}}">
+                        <i class="fa fa-fw fa-home"></i>
+                        <span class="nav-link-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Recommended Courses">
+                    <a class="nav-link" ng-click="model.hasData1()">
+                        <i class="fa fa-fw fa-book"></i>
+                        <span class="nav-link-text">Recommended Courses</span>
+                    </a>
+                </li>
+                <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Discussion Board">
+                    <a class="nav-link" href="#/user/{{model.userId}}/discussionBoard">
+                        <i class="fa fa-fw fa-table"></i>
+                        <span class="nav-link-text">Discussion Board</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-user"></i>
+                        <span class="nav-link-text">{{model.user.username}}</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#/user/{{model.userId}}/discussionBoard">Discussion Board</a>
+                </li>
+                <li class="breadcrumb-item active">View Thread</li>
+            </ol>
+
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <p class="thread-heading">{{model.thread.query}}</p>
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <img src="https://www.w3schools.com/howto/img_avatar2.png" class="media-object" style="width:80px">
+                            <figcaption class="text-center">
+                                <span class="required-field">{{model.thread.userReputationPoints}} Points</span><br>
+
+                            </figcaption>
+                        </div>
+                        <div class="media-body" id="left-pad">
+                            <p>{{model.thread.description}}</p>
+                            <p><i>Asked by {{model.thread.username}} on {{model.thread.dateTime}}</i></p>
+                        </div>
+                    </div><br>
+                    <a href="#/user/{{model.userId}}/thread/{{model.thread._id}}/comments" class="btn btn-info" role="button">Comment</a>
+                </div>
+            </div>
+            {{$scope}}
+            <div class="table-responsive">
+                <div class="card-header" id="answer-header">{{model.thread.numberOfComments}} Comments</div>
+                <table class="table">
+
+                    <tr ng-repeat="comment in model.comments">
+                        <td>
+                            <div class="media comment">
+                                <div class="media-left media-middle">
+                                    <figure>
+                                        <img src="http://pixelmesh.com/assets/images/avatar-viola.png" style="width:80px">
+                                        <figcaption class="text-center">
+                                            <span class="required-field">{{ comment.userReputationPoints }} Points</span><br>
+
+
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="media-body" id="left-pad">
+                                    <p > {{ comment.comments }}</p>
+                                    <p><i>Replied by {{ comment.username }} on {{ comment.dateTime }}</i></p>
+                                    <p>
+                                        <button ng-click="model.updateThreadForUpVote(comment._id)"> <img src="../project/images/thumbs-up.png"></button>
+
+                                        <b id="boldstuff">{{ comment.likes }}</b>
+
+
+                                        <button ng-click="model.updateThreadForDownVote(comment._id)"> <img src="../project/images/thumbs-down.png"></button>
+
+                                        <b id="b">{{ comment.dislikes }}</b>
+
+
+
+
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <br>
+
+        </div>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+        <div class="container">
+            <div class="text-center">
+                <small>Copyright © The Advisors 2018</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="#/login">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
