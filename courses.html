@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>CCIS Graduate Academic Advisor-Course</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+
+  <!-- Our custom CSS-->
+  <!--Please add your styles here-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/stylerecommendcourse.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="home.html">CCIS Graduate Academic Advisor</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Home">
+          <a class="nav-link" href="home.html">
+            <i class="fa fa-fw fa-home"></i>
+            <span class="nav-link-text">Home</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Recommended Courses">
+         <a class="nav-link" href="grades.html">
+            <i class="fa fa-fw fa-book"></i>
+            <span class="nav-link-text">Recommended Courses</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Discussion Board">
+          <a class="nav-link" href="discussion-board.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Discussion Board</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+         <li class="nav-item">
+            <a href="profile.html" class="nav-link">
+            <i class="fa fa-fw fa-user"></i>emailaddress@gmail.com</a>
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </nav>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+     <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="questionaire.html">Questionnaire</a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="grades.html">Previous courses info</a>
+        </li>
+        <li class="breadcrumb-item active">Recommended Courses</li>
+      </ol>
+      <div class="row">
+        <div class="col-12">
+           <h2 class="text-center">Recommended Courses</h2>
+        </div>
+      </div>
+
+
+      <div class="row">
+	       	<div class="col-12">
+	       	<br><br>
+		      </div>
+	</div>
+	<div class="row">
+		<div class="col-3">
+
+      <select class="form-control">
+            <option selected disabled>Filter by Specialization</option>
+            <option value="AI">AI</option>
+            <option value="DB">Database</option>
+            <option value="Networks">Networks</option>
+            <option value="Theory">Theory</option>
+            <option value="SE">Software Engineering</option>
+            <option value="HCI">HCI</option>
+            <option value="Graphics">Graphics</option>
+            <option value="Security">Security</option>
+            <option value="Game Design">Game Design</option>
+     </select>
+          
+        </div>
+		<div class="col-3">
+			 <select class="form-control">
+            <option selected disabled>Filter by Study Time(Hours/Week)</option>
+            <option value="AI">4-8</option>
+            <option value="DB">8-12</option>
+            <option value="Networks">12-16</option>
+            <option value="Theory">16-20</option>
+       </select>
+          
+        </div>
+        <div class="col-3">
+          <a href="#" class="btn btn-secondary" role="button">Reset Filter</a>
+          
+        </div>
+      </div>
+	<div><br>
+	</div>
+
+
+
+
+</div>
+<div>
+  <div class="transbox">
+  <p>Course : CS5200- Database Management Systems</p>
+	<p>Professor : John Doe</p>
+	<p>Lecture Hours : MR 6:00pm-7:30pm</p>
+  <p>Location : Snell Library 125</p>
+  <p><a href="viewThreads-dbms.html" style="color:navy; text-decoration: underline;">View CS5200 Discussions</a></p>
+  </div>
+
+<div class="opbox">
+<div class="score">
+<p > Average student grades under professor John Doe</p>
+</div>
+<ul class="bar-graph">
+  <li class="bar-graph-axis">
+    <div class="bar-graph-label">100%</div>
+    <div class="bar-graph-label">75%</div>
+    <div class="bar-graph-label">50%</div>
+    <div class="bar-graph-label">25%</div>
+    <div class="bar-graph-label">0%</div>
+  </li>
+  <li class="bar primary" style="height: 55%;" title="55">
+    
+    <div class="description">A/A-</div>
+  </li>
+  <li class="bar secondary" style="height: 35%;" title="35">
+    
+    <div class="description">B+/B</div>
+  </li>
+  <li class="bar success" style="height: 9%;" title="9">
+    
+    <div class="description">B-/C+</div>
+  </li>
+  <li class="bar alert" style="height: 1%;" title="1">
+    
+    <div class="description">C+</div>
+  </li>
+</ul></div>
+</div>
+<div>
+  <div class="transbox">
+  <p>Course : CS6200- Information Retrieval</p>
+	<p>Professor : Alice Wonderland</p>
+  <p>Lecture Hours : TF 1:30pm-3:30pm</p>
+  <p>Location : Cargill 90</p>
+  <p><a href="viewThreads-dbms.html" style="color:navy; text-decoration: underline;">View CS6200 Discussions</a></p>
+  </div>
+
+<div class="opbox">
+<div class="score">
+<p > Average student grades under professor Alice Wonderland</p>
+</div>
+<ul class="bar-graph">
+  <li class="bar-graph-axis">
+    <div class="bar-graph-label">100%</div>
+    <div class="bar-graph-label">75%</div>
+    <div class="bar-graph-label">50%</div>
+    <div class="bar-graph-label">25%</div>
+    <div class="bar-graph-label">0%</div>
+  </li>
+  <li class="bar primary" style="height: 70%;" title="70">
+    
+    <div class="description">A/A-</div>
+  </li>
+  <li class="bar secondary" style="height: 30%;" title="30">
+    
+    <div class="description">B+/B</div>
+  </li>
+  <li class="bar success" style="height: 0%;" title="0">
+    
+    <div class="description">B-/C+</div>
+  </li>
+  <li class="bar alert" style="height: 0%;" title="0">
+    
+    <div class="description">C+</div>
+  </li>
+</ul></div>
+
+
+<div><br><br></div>
+
+
+
+
+
+      
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © The Advisors 2018</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.image {
+  opacity: 1;
+  display: block; 
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border: 2px solid gray;
+}
+
+.thumbnail{
+  border: 0px;
+  margin-bottom: 15px;
+}
+.thumbnail:hover .image {
+  opacity: 0.3;
+}
+
+.thumbnail:hover .middle {
+  opacity: 1;
+}
+
+.container{
+  width: 80%;
+}
+
+.category{
+  font-size: 18px;
+}
+
+#text {
+    width: 300px;
+}
+
+.caption{
+  color:black;
+  font-weight: bold;
+}
+
+#category{
+  font-size: 18px;
+  padding-right: 5px;
+}
