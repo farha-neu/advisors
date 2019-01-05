@@ -1,6 +1,6 @@
 {
   "name": "advisors",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Advisors - HCI Project",
   "main": "server.js",
   "scripts": {
@@ -10,9 +10,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod"
+    "heroku-postbuild": "ng build --prod"
   },
- "private": true,
+  "private": true,
   "dependencies": {
     "@angular/cli": "^7.0.6",
     "@angular/compiler-cli": "^7.0.4",
@@ -26,7 +26,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
-    "express": "^4.16.4",
+    "express": "^4.13.4",
     "font-awesome": "^4.7.0",
     "path": "^0.12.7",
     "rxjs": "~6.3.3",
@@ -35,7 +35,6 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.1",
     "cookie-parser": "^1.4.3",
-    "express": "^4.13.4",
     "express-session": "^1.13.0",
     "mongoose": "^4.4.15",
     "multer": "^1.1.0",
@@ -44,7 +43,7 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.10.0",
+    "@angular-devkit/build-angular": "^0.11.4",
     "@angular/language-service": "~7.0.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
