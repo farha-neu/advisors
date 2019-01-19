@@ -132,23 +132,24 @@
 div.transbox {
   margin: 20px;
   background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60); /* For IE8 and earlier */
+  /* border: 1px solid black; */
+  /* opacity: 0.6; */
+  /* filter: alpha(opacity=60);  */
+  /* For IE8 and earlier */
 }
 
 div.opbox {
   margin: 20px;
   background-color: #ffffff;
-  border: 1px solid black;
+  border: 2px solid gainsboro;
   opacity: 1;
   filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
 div.transbox p {
   margin: 1%;
-  font-weight: bold;
-  color: #000000;
+  /* font-weight: bold; */
+  color:black;
 }
 div.score p {
   margin-left: 10%;
@@ -156,3 +157,6 @@ div.score p {
   color: #000000;
 }
 
+.transbox p:first-child{
+  font-size: 20px;
+}
